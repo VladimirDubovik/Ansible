@@ -1,11 +1,16 @@
 ---
-- hosts: tests
+- hosts:         test1
+  become:        yes
+  become_user:   root
+  become_method: sudo
+  gather_facts:  yes
+
   tasks:
 
   - name: update_package_list
     apt: update_cache=yes
-#    sudo: yes
+    sudo: yes
 
   - name: install_gedit
     apt: name=gedit
-#    sudo: yes
+    sudo: yes
