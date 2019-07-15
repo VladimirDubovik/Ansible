@@ -1,0 +1,11 @@
+---
+- hosts: tests
+  tasks:
+
+  - name: make_directory
+    shell: mkdir ~/test
+
+  - name: copy_file
+    copy:
+      src:  /tmp/somefile
+      dest: ~/test/somefile
