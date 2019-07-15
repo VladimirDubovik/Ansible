@@ -4,4 +4,4 @@
 
   - name: makedir
     shell: mkdir directory
-#    shell: touch directory/somefile
+    shell: touch directory/somefile
