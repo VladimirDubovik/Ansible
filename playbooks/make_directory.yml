@@ -1,0 +1,7 @@
+---
+- hosts: tests
+  tasks:
+
+  - name: makedir
+    shell: mkdir directory
+#    shell: touch directory/somefile

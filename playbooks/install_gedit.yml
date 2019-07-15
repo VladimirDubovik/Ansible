@@ -1,0 +1,11 @@
+---
+- hosts: tests
+  tasks:
+
+  - name: update_package_list
+    apt: update_cache=yes
+#    sudo: yes
+
+  - name: install_gedit
+    apt: name=gedit
+#    sudo: yes
