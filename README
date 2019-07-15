@@ -4,7 +4,7 @@
   master - Fedora Workstation 30 (minimal + Ansible 2.8.1)
   test1  - Fedora Workstation 30 (minimal)
   test2  - Debian 10             (minimal)
-  test3  - CenOS 7               (minimal)
+##  test3  - CenOS 7               (minimal)
   
 master
   ip:                 192.168.43.110
@@ -19,5 +19,9 @@ test1
 test2
   ip:                 192.168.43.138
   username/password:  test
+  
+##test3
+##  ip:                 
+##  username/password:  test
 
 All ip was added to /etc/hosts file
