@@ -1,0 +1,13 @@
+---
+- name: _test_show_OS_family
+  debug:
+    msg: System {{inventory_hostname}} is {{ansible_os_family}} family
+
+- name: _test_make_directory
+  file:
+    path:  ~/test/{{ansible_os_family}}
+    state: directory
+    mode:  '0755' 
+
+- name: _test_create_file
+  template: src = test/templates/test.txt.j2 dest = ~/test/{{ansible_os_family}}/test.txt

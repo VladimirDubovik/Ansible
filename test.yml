@@ -1,0 +1,6 @@
+---
+- hosts: tests
+  user: test
+  
+  roles:
+    - test
