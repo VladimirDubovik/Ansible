@@ -10,4 +10,4 @@
     mode:  '0755' 
 
 - name: _test_create_file
-  template: src = test/templates/test.txt.j2 dest = ~/test/{{ansible_os_family}}/test.txt
+  template: src=test.txt.j2 dest=~/test/{{ansible_os_family}}/test.txt
