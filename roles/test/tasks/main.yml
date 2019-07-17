@@ -1,13 +1,26 @@
 ---
-- name: _test_show_OS_family
-  debug:
-    msg: System {{inventory_hostname}} is {{ansible_os_family}} family
+#- name: _test_show_OS_family
+#  debug:
+#    msg: System {{inventory_hostname}} is {{ansible_os_family}} family
 
-- name: _test_make_directory
+
+- name: _load_from_Git
+#  hosts:      localhost
+  connection: local
+  run_once:   true
+  git:
+    repo:     'https://github.com/VladimirDubovik/__ansi.git'
+    dest:     /tmp/.__ansi
+#  register:   _load
+
+- name: _make_directory
   file:
-    path:  ~/test/{{ansible_os_family}}
-    state: directory
-    mode:  '0755' 
+    path:     ~/{{ansible_os_family}}
+    state:    directory
+    mode:     '0755' 
+#  register:   _directory
+#  when:       _load.stat.exist
 
-- name: _test_create_file
-  template: src=test.txt.j2 dest=~/test/{{ansible_os_family}}/test.txt
+- name: _create_file
+  template:   src=/tmp/.__ansi/somefile.{{inventory_hostname}} dest=~/{{ansible_os_family}}/test.txt
+#  when:       _directory.stat.exist
