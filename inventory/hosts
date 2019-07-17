@@ -42,3 +42,6 @@
 
 ## db-[99:101]-node.example.com
 
+[test]
+test1   ansible_ssh_host=test1
+test2   ansible_ssh_host=test2
