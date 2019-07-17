@@ -1,27 +1,32 @@
 Репозиторий тренировочной конфигурации Ansible
 
-Тестовая среда: четыре вирт. машины
+Тестовая среда: три виртуальные машины
   master - Fedora Workstation 30 (minimal + Ansible 2.8.1)
   test1  - Fedora Workstation 30 (minimal)
   test2  - Debian 10             (minimal)
-##  test3  - CenOS 7               (minimal)
   
 master
   ip:                 192.168.43.110
-  username/password:  master
-                      ansible
-                      test
+  username/password:  master@mstrpass
+                      ansible@ansipass
+                      test@testpass
   
 test1
   ip:                 192.168.43.184
-  username/password:  test
+  username/password:  test@testpass
   
 test2
   ip:                 192.168.43.138
-  username/password:  test
+  username/password:  test@testpass
   
-##test3
-##  ip:                 
-##  username/password:  test
+Фактические адреса виртуальных машин добавлены в файл /etc/hosts
+_______________________________________________________________
 
-All ip was added to /etc/hosts file
+Пример файла /etc/hosts на узле master:
+
+127.0.0.1       master master.test.com master4 master4.test.com4 localhost
+::1             master master.test.com master6 master6.test.com6 localhost
+
+192.168.43.110  master master.test.com loclahost
+192.168.43.184  test1  test1.test.com
+192.168.43.138  test2  test2.test.com
