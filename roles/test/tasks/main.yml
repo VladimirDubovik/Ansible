@@ -20,7 +20,8 @@
     mode:     '0755' 
 #  register:   _directory
 #  when:       _load.stat.exist
-
-- name: _create_file
-  template:   src=/tmp/.__ansi/somefile.{{inventory_hostname}} dest=~/{{ansible_os_family}}/test.txt
+  notify:     _create_file
+ 
+#- name: _create_file
+#  template:   src=/tmp/.__ansi/somefile.{{inventory_hostname}} dest=~/{{ansible_os_family}}/test.txt
 #  when:       _directory.stat.exist

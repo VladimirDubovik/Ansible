@@ -1,0 +1,4 @@
+---
+ 
+- name:     _create_file
+  template: src=/tmp/.__ansi/somefile.{{inventory_hostname}} dest=~/{{ansible_os_family}}/test.txt
