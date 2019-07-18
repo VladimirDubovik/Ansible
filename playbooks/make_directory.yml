@@ -1,9 +1,0 @@
----
-- hosts: tests
-  tasks:
-
-  - name: make_directory
-    shell: mkdir subdirectory
-
-  - name: make_file
-    shell: touch subdirectory/somefile
