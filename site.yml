@@ -1,4 +1,4 @@
 ---
-- import_playbook: vault.yml
-- import_playbook: test.yml
-#- import_playbook: swconfig.yml
+- import_playbook: playbooks/vault.yml
+- import_playbook: playbooks/test.yml
+- import_playbook: playbooks/swconfig.yml
