@@ -1,0 +1,4 @@
+---
+ 
+- name: create file
+  template: src=config.txt dest=~/test/config.txt

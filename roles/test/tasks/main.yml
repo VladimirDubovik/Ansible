@@ -4,7 +4,7 @@
 #    msg: System {{inventory_hostname}} is {{ansible_os_family}} family
 
 
-- name: _load_from_Git
+- name: load from Git
 #  hosts:      localhost
   connection: local
   run_once:   true
@@ -13,15 +13,11 @@
     dest:     /tmp/.__ansi
 #  register:   _load
 
-- name: _make_directory
+- name: make directory
   file:
     path:     ~/{{ansible_os_family}}
     state:    directory
     mode:     '0755' 
 #  register:   _directory
 #  when:       _load.stat.exist
-  notify:     _create_file
- 
-#- name: _create_file
-#  template:   src=/tmp/.__ansi/somefile.{{inventory_hostname}} dest=~/{{ansible_os_family}}/test.txt
-#  when:       _directory.stat.exist
+  notify: create file

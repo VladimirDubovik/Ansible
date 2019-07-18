@@ -1,0 +1,7 @@
+---
+- name: make directory
+  file:
+    path:     ~/test
+    state:    directory
+    mode:     '0755' 
+  notify:     create file

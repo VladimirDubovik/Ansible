@@ -1,0 +1,5 @@
+---
+prod:
+  vars:
+    vitalik_var: bad
+    volodia_var: good

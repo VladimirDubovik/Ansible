@@ -1,0 +1,16 @@
+---
+  - debug:
+      msg: "test encrypting/decrypting"
+
+  - name: read test file
+    include_vars:
+      file: test.yml
+
+  - debug:
+      msg: '{{ _text_ }}'
+
+#  - name: read encrypted text from test file
+#    copy:
+#      src  = '{{ _text_ }}'
+#      dest = /tmp/test_out.txt
+

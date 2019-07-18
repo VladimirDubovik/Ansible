@@ -1,0 +1,2 @@
+Vitalik is {{ vitalik_var }}
+Volodia is {{ volodia_var }}

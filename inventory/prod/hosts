@@ -1,0 +1,6 @@
+[prod]
+test1   ansible_ssh_host=test1
+test2   ansible_ssh_host=test2
+
+[localhost]
+master
